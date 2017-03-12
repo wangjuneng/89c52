@@ -1,26 +1,27 @@
 #include<reg52.h>
-
+#include "01.c" 
 
 #define uint  unsigned int
-#define uchar unsigned char;
+#define uchar unsigned char
 
 
-sbit ADDR0 = P1 ^ 0;
-sbit ADDR1 = P1 ^ 1;
-sbit ADDR2 = P1 ^ 2;
-sbit ADDR3 = P1 ^ 3;
-sbit ENLED = P1 ^ 4;
+
+
 
 void main(){
 
-	uint i,j,k;	
+	uint i,j,k,cnt=0;
+	uchar digtialLedChar[] ={
+		0x06,0x5d,0x5f,0x66,0x6d,0x7d,0x07,0x7f
+	};
+		
 
 	ENLED = 0;
 	ADDR3 = 1;
 	ADDR2 = 0;
 	ADDR1 = 0;
 	ADDR0 = 0;
-
+	
 	while(1){
 		for(i=0;i<2;i++){
 			for(j=0;j<2;j++){
@@ -28,7 +29,7 @@ void main(){
 					ADDR2 = i;
 					ADDR1 = j;
 					ADDR0 = k;
-					P0 = ~0x06;
+					P0 = 0x00;
 				}
 			}
 		}

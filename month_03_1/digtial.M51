@@ -1,0 +1,217 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/12/2017  22:08:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, digtial.obj TO digtial RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  digtial.obj (DIGTIAL)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?COPY)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?SLDIV)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?ULDIV)
+
+
+LINK MAP OF MODULE:  digtial (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     001AH     UNIT         _DATA_GROUP_
+            IDATA   0022H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0219H     UNIT         ?C?LIB_CODE
+            CODE    021CH     0163H     UNIT         ?PR?MAIN?DIGTIAL
+            CODE    037FH     0044H     UNIT         ?C?LDIV
+            CODE    03C3H     0038H     UNIT         ?PR?_DELAY?DIGTIAL
+            CODE    03FBH     0016H     UNIT         ?CO?DIGTIAL
+            CODE    0411H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   digtial (?C_STARTUP)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?DIGTIAL
+
+?PR?MAIN?DIGTIAL               0008H    001AH
+  +--> ?CO?DIGTIAL
+  +--> ?PR?_DELAY?DIGTIAL
+
+
+
+SYMBOL TABLE OF MODULE:  digtial (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/12/2017  22:08:48  PAGE 2
+
+
+  -------         MODULE        ?C_STARTUP
+  C:0411H         SEGMENT       ?C_C51STARTUP
+  I:0022H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0414H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0411H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0411H         LINE#         133
+  C:0413H         LINE#         134
+  C:0414H         LINE#         135
+  C:0415H         LINE#         136
+  C:0417H         LINE#         185
+  C:041AH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        DIGTIAL
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:03C3H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:021CH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:03FBH         SYMBOL        _?ix1000
+  C:040BH         SYMBOL        _?ix1001
+  B:0088H.5       PUBLIC        TF0
+  B:0090H.6       PUBLIC        BUZZ
+  B:0090H.0       PUBLIC        ADDR0
+  D:008CH         PUBLIC        TH0
+  B:0090H.1       PUBLIC        ADDR1
+  B:0090H.2       PUBLIC        ADDR2
+  B:0090H.3       PUBLIC        ADDR3
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/12/2017  22:08:48  PAGE 3
+
+
+  D:00C8H         PUBLIC        T2CON
+  B:0090H.4       PUBLIC        ENLED
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        LedChar
+  D:0018H         SYMBOL        LedBuff
+  D:001EH         SYMBOL        index
+  D:0020H         SYMBOL        sec
+  -------         ENDDO         
+  C:021CH         LINE#         17
+  C:021CH         LINE#         18
+  C:022FH         LINE#         23
+  C:0242H         LINE#         28
+  C:024BH         LINE#         31
+  C:024DH         LINE#         32
+  C:024FH         LINE#         34
+  C:0251H         LINE#         35
+  C:0253H         LINE#         36
+  C:0255H         LINE#         39
+  C:0255H         LINE#         40
+  C:0257H         LINE#         41
+  C:0269H         LINE#         42
+  C:0271H         LINE#         43
+  C:0282H         LINE#         44
+  C:029BH         LINE#         45
+  C:02B4H         LINE#         46
+  C:02CDH         LINE#         47
+  C:02E6H         LINE#         48
+  C:0307H         LINE#         50
+  C:0307H         LINE#         52
+  C:0309H         LINE#         53
+  C:0333H         LINE#         54
+  C:033EH         LINE#         55
+  C:0349H         LINE#         56
+  C:0354H         LINE#         57
+  C:035FH         LINE#         58
+  C:036AH         LINE#         59
+  C:0373H         LINE#         60
+  C:0373H         LINE#         61
+  C:0373H         LINE#         63
+  C:0373H         LINE#         65
+  C:0375H         LINE#         66
+  C:037CH         LINE#         67
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        nms
+  -------         DO            
+  D:0002H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:03C3H         LINE#         73
+  C:03C3H         LINE#         74
+  C:03C6H         LINE#         76
+  C:03C9H         LINE#         77
+  C:03CCH         LINE#         78
+  C:03CFH         LINE#         79
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/12/2017  22:08:48  PAGE 4
+
+
+  C:03D1H         LINE#         80
+  C:03DAH         LINE#         81
+  C:03DAH         LINE#         82
+  C:03DDH         LINE#         83
+  C:03DFH         LINE#         84
+  C:03E2H         LINE#         85
+  C:03E5H         LINE#         86
+  C:03EAH         LINE#         87
+  C:03EAH         LINE#         88
+  C:03EAH         LINE#         89
+  C:03F3H         LINE#         90
+  C:03FAH         LINE#         91
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DIGTIAL
+
+  -------         MODULE        ?C?COPY
+  C:00D3H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?UIDIV
+  C:00F9H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?SLDIV
+  C:037FH         PUBLIC        ?C?SLDIV
+  -------         ENDMOD        ?C?SLDIV
+
+  -------         MODULE        ?C?ULDIV
+  C:018AH         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+Program Size: data=35.0 xdata=0 code=1053
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

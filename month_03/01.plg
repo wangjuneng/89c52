@@ -4,75 +4,81 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 D:\51workspaces\month_03\01.uvproj
-Project File Date:  03/06/2017
+Project File Date:  03/09/2017
 
 <h2>Output:</h2>
 Build target 'Target 1'
 assembling STARTUP.A51...
 compiling 01.c...
-01.C(69): error C141: syntax error near 'nms', expected ')'
+compiling digtial.c...
+digtial.c(5): warning C317: attempt to redefine macro 'uchar'
+DIGTIAL.C(8): error C231: 'ADDR0': redefinition
+DIGTIAL.C(9): error C231: 'ADDR1': redefinition
+DIGTIAL.C(10): error C231: 'ADDR2': redefinition
+DIGTIAL.C(11): error C231: 'ADDR3': redefinition
+DIGTIAL.C(12): error C231: 'ENLED': redefinition
+DIGTIAL.C(14): error C141: syntax error near '['
 Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-01.C(74): error C141: syntax error near 'unsigned'
-01.C(74): error C202: 'i': undefined identifier
-01.C(75): error C202: 'i': undefined identifier
-01.C(79): error C202: 'TLO': undefined identifier
-01.C(81): error C202: 'j': undefined identifier
-01.C(82): error C202: 'j': undefined identifier
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-01.C(81): error C202: 'TLO': undefined identifier
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2129
-creating hex file from "01"...
-"01" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2125
-creating hex file from "01"...
-"01" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2125
-creating hex file from "01"...
-"01" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-01.C(78): error C141: syntax error near 'for'
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2127
-creating hex file from "01"...
-"01" - 0 Error(s), 1 Warning(s).
 Build target 'Target 1'
 assembling STARTUP.A51...
 compiling 01.c...
 compiling digtial.c...
-DIGTIAL.C(15): error C202: 'ENLED': undefined identifier
+digtial.c(5): warning C317: attempt to redefine macro 'uchar'
+DIGTIAL.C(8): error C231: 'ADDR0': redefinition
+DIGTIAL.C(9): error C231: 'ADDR1': redefinition
+DIGTIAL.C(10): error C231: 'ADDR2': redefinition
+DIGTIAL.C(11): error C231: 'ADDR3': redefinition
+DIGTIAL.C(12): error C231: 'ENLED': redefinition
+DIGTIAL.C(19): error C141: syntax error near '['
+DIGTIAL.C(21): error C141: syntax error near ']'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 01.c...
+compiling digtial.c...
+DIGTIAL.C(8): error C231: 'ADDR0': redefinition
+DIGTIAL.C(9): error C231: 'ADDR1': redefinition
+DIGTIAL.C(10): error C231: 'ADDR2': redefinition
+DIGTIAL.C(11): error C231: 'ADDR3': redefinition
+DIGTIAL.C(12): error C231: 'ENLED': redefinition
+DIGTIAL.C(19): error C141: syntax error near '['
+DIGTIAL.C(21): error C141: syntax error near ']'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 01.c...
+compiling digtial.c...
+DIGTIAL.C(15): error C141: syntax error near '['
+DIGTIAL.C(17): error C141: syntax error near ']'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 01.c...
+compiling digtial.c...
+DIGTIAL.C(15): error C141: syntax error near '['
+DIGTIAL.C(17): error C141: syntax error near ']'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 01.c...
+compiling digtial.c...
+DIGTIAL.C(15): error C141: syntax error near '['
+DIGTIAL.C(17): error C141: syntax error near ']'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 01.c...
+compiling digtial.c...
+DIGTIAL.C(15): error C141: syntax error near '['
+DIGTIAL.C(17): error C141: syntax error near ']'
+DIGTIAL.C(33): error C202: 'digtialLedChar': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 01.c...
+compiling digtial.c...
+DIGTIAL.C(19): error C141: syntax error near '['
+DIGTIAL.C(21): error C141: syntax error near ']'
 Target not created
 Build target 'Target 1'
 assembling STARTUP.A51...
@@ -80,118 +86,132 @@ compiling 01.c...
 compiling digtial.c...
 linking...
 *** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
-    SYMBOL:  MAIN
+    SYMBOL:  _NMS_DELAY
     MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NUS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN1
+    MODULE:  digtial.obj (DIGTIAL)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN1?01
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_NMS_DELAY?01
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?MAIN?DIGTIAL
-Program Size: data=27.1 xdata=0 code=2142
+    SEGMENT: ?PR?MAIN1?DIGTIAL
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NMS_DELAY?DIGTIAL
+Program Size: data=47.1 xdata=0 code=2734
 Target not created
 Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 01.c...
+compiling digtial.c...
 linking...
 *** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
-    SYMBOL:  MAIN
+    SYMBOL:  _NMS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NUS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN1
     MODULE:  digtial.obj (DIGTIAL)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN1?01
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_NMS_DELAY?01
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?MAIN?DIGTIAL
-Program Size: data=27.1 xdata=0 code=2142
+    SEGMENT: ?PR?MAIN1?DIGTIAL
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NMS_DELAY?DIGTIAL
+Program Size: data=47.1 xdata=0 code=2734
 Target not created
 Build target 'Target 1'
 assembling STARTUP.A51...
 compiling 01.c...
 compiling digtial.c...
 linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NMS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NUS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN1
+    MODULE:  digtial.obj (DIGTIAL)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?MAIN1?01
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2142
-creating hex file from "01"...
-"01" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-compiling digtial.c...
-linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?MAIN1?01
+    SEGMENT: ?PR?MAIN1?DIGTIAL
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2142
-creating hex file from "01"...
-"01" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-compiling digtial.c...
-DIGTIAL.C(15): error C202: 'i': undefined identifier
-DIGTIAL.C(24): error C202: 'i': undefined identifier
-DIGTIAL.C(25): error C202: 'j': undefined identifier
-DIGTIAL.C(26): error C202: 'k': undefined identifier
-DIGTIAL.C(27): error C202: 'i': undefined identifier
-DIGTIAL.C(28): error C202: 'j': undefined identifier
-DIGTIAL.C(29): error C202: 'k': undefined identifier
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-compiling digtial.c...
-DIGTIAL.C(15): error C202: 'i': undefined identifier
-DIGTIAL.C(24): error C202: 'i': undefined identifier
-DIGTIAL.C(25): error C202: 'j': undefined identifier
-DIGTIAL.C(26): error C202: 'k': undefined identifier
-DIGTIAL.C(27): error C202: 'i': undefined identifier
-DIGTIAL.C(28): error C202: 'j': undefined identifier
-DIGTIAL.C(29): error C202: 'k': undefined identifier
+    SEGMENT: ?PR?_NMS_DELAY?DIGTIAL
+Program Size: data=47.1 xdata=0 code=2741
 Target not created
 Build target 'Target 1'
 assembling STARTUP.A51...
 compiling 01.c...
 compiling digtial.c...
 linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NMS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NUS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN1
+    MODULE:  digtial.obj (DIGTIAL)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?MAIN1?01
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2202
-creating hex file from "01"...
-"01" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-compiling digtial.c...
-DIGTIAL.C(15): error C202: 'i': undefined identifier
-DIGTIAL.C(24): error C202: 'i': undefined identifier
-DIGTIAL.C(25): error C202: 'j': undefined identifier
-DIGTIAL.C(26): error C202: 'k': undefined identifier
-DIGTIAL.C(27): error C202: 'i': undefined identifier
-DIGTIAL.C(28): error C202: 'j': undefined identifier
-DIGTIAL.C(29): error C202: 'k': undefined identifier
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN1?DIGTIAL
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NMS_DELAY?DIGTIAL
+Program Size: data=41.1 xdata=0 code=2702
 Target not created
 Build target 'Target 1'
 assembling STARTUP.A51...
 compiling 01.c...
 compiling digtial.c...
 linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NMS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _NUS_DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  digtial.obj (DIGTIAL)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN1
+    MODULE:  digtial.obj (DIGTIAL)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?MAIN1?01
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2202
-creating hex file from "01"...
-"01" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling 01.c...
-compiling digtial.c...
-linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?MAIN1?01
+    SEGMENT: ?PR?MAIN1?DIGTIAL
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_NMS_DELAY?01
-Program Size: data=27.1 xdata=0 code=2202
-creating hex file from "01"...
-"01" - 0 Error(s), 2 Warning(s).
+    SEGMENT: ?PR?_NMS_DELAY?DIGTIAL
+Program Size: data=41.1 xdata=0 code=2700
+Target not created
