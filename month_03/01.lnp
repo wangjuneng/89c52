@@ -1,0 +1,5 @@
+"STARTUP.obj",
+"01.obj",
+"digtial.obj" 
+TO "01" 
+RAMSIZE(256) 
