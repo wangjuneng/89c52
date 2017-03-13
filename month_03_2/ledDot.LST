@@ -1,0 +1,84 @@
+C51 COMPILER V9.02   LEDDOT                                                                03/13/2017 23:16:44 PAGE 1   
+
+
+C51 COMPILER V9.02, COMPILATION OF MODULE LEDDOT
+OBJECT MODULE PLACED IN ledDot.OBJ
+COMPILER INVOKED BY: d:\Keil\C51\BIN\C51.EXE ledDot.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "common.h"
+   2          
+   3          
+   4          
+   5          sbit ENLED = P1 ^ 4;
+   6          sbit ADDR0 = P1 ^ 0;
+   7          sbit ADDR1 = P1 ^ 1;
+   8          sbit ADDR2 = P1 ^ 2;
+   9          sbit ADDR3 = P1 ^ 3;
+  10          
+  11          void showLedNot();
+  12          uint cnt = 0;
+  13          void main(){
+  14   1      
+  15   1               uint i=0,sec = 0;
+  16   1               ENLED = 0;
+  17   1               ADDR3 = 0;
+  18   1               ADDR0 = 0;
+  19   1               ADDR1 = 0;
+  20   1               ADDR2 = 0;
+  21   1      
+  22   1               P0 = 0x00;
+  23   1      
+  24   1               //设置ET0号中断回调函数showLedNot;
+  25   1               callBackType0 = &showLedNot;
+  26   1      
+  27   1              //打开时间中断0
+  28   1               openInterrupteET0();
+  29   1      
+  30   1               while(1){
+  31   2                        
+  32   2               }
+  33   1      
+  34   1      }
+  35          
+  36          void showLedNot(){
+  37   1              switch(cnt++ /1000 % 8){
+  38   2                      case 0: ADDR2 = 0;ADDR1 =0;ADDR0=0; break;
+  39   2                      case 1: ADDR2 = 0;ADDR1 =0;ADDR0=1; break;
+  40   2                      case 2: ADDR2 = 0;ADDR1 =1;ADDR0=0; break;
+  41   2                      case 3: ADDR2 = 0;ADDR1 =1;ADDR0=1; break;
+  42   2                      case 4: ADDR2 = 1;ADDR1 =0;ADDR0=0; break;
+  43   2                      case 5: ADDR2 = 1;ADDR1 =0;ADDR0=1; break;
+  44   2                      case 6: ADDR2 = 1;ADDR1 =1;ADDR0=0; break;
+  45   2                  case 7: ADDR2 = 1;ADDR1 =1;ADDR0=1; break;
+  46   2                      default: break;
+  47   2              }
+  48   1      }
+  49          
+  50          /*
+  51                  定义1s
+  52          */
+  53          void timeInterrupt() interrupt 1 
+  54          {
+  55   1              set1Ms();
+C51 COMPILER V9.02   LEDDOT                                                                03/13/2017 23:16:44 PAGE 2   
+
+  56   1              if(callBackType0){
+  57   2                 (*callBackType0)();
+  58   2              }
+  59   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    260    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      5       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
