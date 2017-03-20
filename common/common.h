@@ -108,10 +108,7 @@ void showDigital(uint num){
 	  DigitalLedBuff[3] = DigitalLedChar[num / 1000 % 10];
 	  DigitalLedBuff[4] = DigitalLedChar[num / 10000 % 10];
 	  DigitalLedBuff[5] = DigitalLedChar[num / 100000 % 10];
-	  
-	  
-	  //LED0
-	  //ENLED = 0;
+	   
 	  switch(index++%6){
 		case 0 :  ADDR2 = 0;ADDR1 = 0;ADDR0 = 0; DIGITAL = DigitalLedBuff[0];	break;
 		case 1 :  ADDR2 = 0;ADDR1 = 0;ADDR0 = 1; DIGITAL = DigitalLedBuff[1];	break;
@@ -122,7 +119,4 @@ void showDigital(uint num){
 		default:
 			break;
 	 }
-	 //ENLED = 1;
-
-	 //delay(20);
 }
