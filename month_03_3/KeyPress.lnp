@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"key.obj" 
+TO "KeyPress" 
+RAMSIZE(256) 
